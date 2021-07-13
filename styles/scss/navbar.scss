@@ -1,0 +1,146 @@
+@mixin mob{
+  @media (max-width:500px)
+  {
+    @content;
+  }
+}
+
+.navbar {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-bars {
+  justify-content: flex-end;
+  margin-left: 10px;
+  font-size: 30px;
+  background: none;
+  color: white;
+}
+.menu-bars-close{
+  margin-left: 10px;
+  font-size: 30px;
+  text-align: center;
+  background: none;
+}
+
+.open-sidebar a:hover{
+  color: black;
+}
+
+.nav-menu {
+  background-color: #f4f4f4;
+  border-style: solid;
+  border-color: transparent;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 80px;
+  right: -100%;
+  transition: 850ms;
+  overflow-y: auto;
+}
+
+.nav-menu.active {
+  right: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 10px 0 10px 16px;
+  list-style: none;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+
+}
+
+.nav-text a:hover {
+  background-color: #D3D3D3;
+}
+
+.nav-menu-items {
+  width: 100%;
+  padding-left: 0;
+}
+
+.navbar-toggle {
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-toggle a:hover{
+  color: #0F0F0F;
+}
+
+.nav-bran{
+  padding-left: 64px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 71.1%;
+  text-align: center;
+  color: #FFFFFF;
+
+
+  @include mob{
+    padding-left: 24px;
+
+  }
+}
+
+.hello-name{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 71.1%;
+  text-align: left;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.side-close-icon{
+
+}
+
+//.flex_end{
+//  flex: 1;
+//  justify-content: flex-end;
+//}
+
+@media (min-width: 992px) {
+  //.navbar-expand-lg {
+  //  flex-wrap: nowrap;
+  //  justify-content: flex-end !important;
+  //}
+
+  .flex_end{
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
