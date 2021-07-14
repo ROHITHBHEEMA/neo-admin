@@ -6,65 +6,6 @@ import {RiChatNewFill} from  'react-icons/ri'
 import {FaExchangeAlt} from 'react-icons/fa'
 
 export const PAGE_DETAILS = {
-    HOME_PAGE_COMPONENTS: {
-        title:"HOME_PAGE_COMPONENTS",
-        heading: "Home Page Components",
-        color: "#9400d3",
-        homepagedisplay:true,
-        icon:< FaExchangeAlt className={'person'} />,
-        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
-        link: "/homepage-components"
-    },
-    INVOICING:{
-        title: "INVOICING",
-        heading: "Invoicing",
-        color: "#4b0082",
-        homepagedisplay:true,
-        icon:<FaFileInvoiceDollar className={'person'} />,
-        navicon:<FaFileInvoiceDollar style={{width:'35px',height:'35px',paddingRight:'15px',color:"#420272"}} />,
-        link: "/invoice"
-    },
-    PRESCRIPTION:{
-        title:"PRESCRIPTION",
-        heading: "Prescription",
-        color: "#000096",
-        homepagedisplay:true,
-        icon:<FaFilePrescription className={'person'} />,
-        navicon:<FaFilePrescription style={{width:'35px',height:'35px',paddingRight:'15px',color:"#00007c"}} />,
-        link: "/prescription"
-    },
-    ORDERS:{
-        title:"ORDERS",
-        heading: "Orders",
-        color: "#004300",
-        permissions:['is_superuser','is_staff'],
-        homepagedisplay:true,
-        icon:<FaCartPlus className={'person'} />,
-        navicon:<FaCartPlus style={{width:'40px',height:'40px',paddingRight:'15px',color:"#025b02"}} />,
-        link: "/orders"
-    },
-    CONSULTATION:{
-        title:"CONSULTATION",
-        heading: "Consultation",
-        color: "#797900",
-        homepagedisplay:true,
-        icon:<RiHospitalLine className={'person'} />,
-        navicon:<RiHospitalLine style={{width:'40px',height:'40px',paddingRight:'15px',color:"#4c4c00"}} />,
-        link: "/consultation"
-    },
-    CREATE_CONSULTATION_SOLT:{
-        title:"CREATE_CONSULTATION_SOLT",
-        heading: "Create Consultation Slot",
-        color: "#FF7F00",
-        homepagedisplay:true,
-        icon:<RiChatNewFill className={'person'} />,
-        navicon:<RiChatNewFill style={{width:'40px',height:'40px',paddingRight:'15px',color:"#b15600"}} />,
-        link: "/consultation/new"
-    }
-
-}
-
-export const HOME_PAGE_DETAILS = {
     KEY_FEATURES_COMPONENTS: {
         title:"KEY_FEATURES_COMPONENTS",
         heading: "Key Features Component",
@@ -74,51 +15,134 @@ export const HOME_PAGE_DETAILS = {
         navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
         link: "/homepage-components/keyfeatures-components"
     },
-    INVOICING:{
-        title: "INVOICING",
-        heading: "Invoicing",
+    CURRICULUM:{
+        title: "CURRICULUM",
+        heading: "Curriculum",
         color: "#4b0082",
         homepagedisplay:true,
         icon:<FaFileInvoiceDollar className={'person'} />,
         navicon:<FaFileInvoiceDollar style={{width:'35px',height:'35px',paddingRight:'15px',color:"#420272"}} />,
-        link: "/invoice"
+        link: "/curriculum-components"
     },
-    PRESCRIPTION:{
-        title:"PRESCRIPTION",
-        heading: "Prescription",
+    CALENDAR:{
+        title:"CALENDAR",
+        heading: "Calendar",
         color: "#000096",
         homepagedisplay:true,
         icon:<FaFilePrescription className={'person'} />,
         navicon:<FaFilePrescription style={{width:'35px',height:'35px',paddingRight:'15px',color:"#00007c"}} />,
-        link: "/prescription"
+        link: "/calendar-components"
     },
-    ORDERS:{
-        title:"ORDERS",
-        heading: "Orders",
-        color: "#004300",
-        permissions:['is_superuser','is_staff'],
+}
+
+export const CURRICULUMITEMS = {
+    CLASS1: {
+        title:"Class 1",
+        heading: "Class 1",
+        color: "#9400d3",
         homepagedisplay:true,
-        icon:<FaCartPlus className={'person'} />,
-        navicon:<FaCartPlus style={{width:'40px',height:'40px',paddingRight:'15px',color:"#025b02"}} />,
-        link: "/orders"
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class1"
     },
-    CONSULTATION:{
-        title:"CONSULTATION",
-        heading: "Consultation",
-        color: "#797900",
+    CLASS2: {
+        title:"Class 2",
+        heading: "Class 2",
+        color: "#9400d3",
         homepagedisplay:true,
-        icon:<RiHospitalLine className={'person'} />,
-        navicon:<RiHospitalLine style={{width:'40px',height:'40px',paddingRight:'15px',color:"#4c4c00"}} />,
-        link: "/consultation"
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class2"
     },
-    CREATE_CONSULTATION_SOLT:{
-        title:"CREATE_CONSULTATION_SOLT",
-        heading: "Create Consultation Slot",
-        color: "#FF7F00",
+    CLASS3: {
+        title:"Class 3",
+        heading: "Class 3",
+        color: "#9400d3",
         homepagedisplay:true,
-        icon:<RiChatNewFill className={'person'} />,
-        navicon:<RiChatNewFill style={{width:'40px',height:'40px',paddingRight:'15px',color:"#b15600"}} />,
-        link: "/consultation/new"
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class3"
+    },
+    CLASS4: {
+        title:"Class 4",
+        heading: "Class 4",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class4"
+    },
+    CLASS5: {
+        title:"Class 5",
+        heading: "Class 5",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class5"
+    },
+    CLASS6: {
+        title:"Class 6",
+        heading: "Class 6",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class6"
+    },
+    CLASS7: {
+        title:"Class 7",
+        heading: "Class 7",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class7"
+    },
+    CLASS8: {
+        title:"Class 8",
+        heading: "Class 8",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class8"
+    },
+    CLASS9: {
+        title:"Class 9",
+        heading: "Class 9",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class9"
+    },
+    CLASS10: {
+        title:"Class 10",
+        heading: "Class 10",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class10"
+    },
+    CLASS11: {
+        title:"Class 11",
+        heading: "Class 11",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class11"
+    },
+    CLASS12: {
+        title:"Class 12",
+        heading: "Class 12",
+        color: "#9400d3",
+        homepagedisplay:true,
+        icon:< FaExchangeAlt className={'person'} />,
+        navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
+        link: "/curriculum-components/class12"
     }
 
 }
