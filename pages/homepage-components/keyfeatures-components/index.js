@@ -52,7 +52,7 @@ const KeyfeaturesComponents = () => {
             <NavBarComponent/>
             <ContainerComponent heading={"Key Features"}>
                 <div className={"form"}>
-                    <Button className={"col-4 url-button"} style={{float: "right", marginBottom: "30px"}}
+                    <Button className={"url-button"} style={{float: "right", marginBottom: "30px"}}
                             href={"/homepage-components/keyfeatures-components/new"}>
                         Create New
                     </Button>

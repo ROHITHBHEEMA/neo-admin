@@ -138,7 +138,7 @@ const KeyfeaturesComponent = (props) =>{
                     </Row>
                 </ContainerComponent>
                 <div className={'d-flex justify-content-center'}>
-                    <Button as="input" variant="danger" type="submit" value={editing_State? "Update": "Submit"} className={'registerbuttonuser'}/>
+                    <Button as="input"  type="submit" value={editing_State? "Update": "Submit"} className={'registerbuttonuser'}/>
                 </div>
 
             </Form>
