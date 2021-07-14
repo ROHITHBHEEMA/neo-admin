@@ -55,8 +55,8 @@ const NavBarComponent = () => {
                     <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                         <ul className={'nav-menu-items'} onClick={showSidebar} style={{position: "relative"}}>
                             <li className={'nav-text'}>
-                                {/*<a href="/">< AiFillHome*/}
-                                {/*    style={{width: '40px', height: '40px', paddingRight: '10px'}}/>Home</a>*/}
+                                <a href="/">< AiFillHome
+                                    style={{width: '40px', height: '40px', paddingRight: '10px'}}/>Home</a>
                             </li>
                             {Object.keys(PAGE_DETAILS).map((key, i) => {
                                 const details = PAGE_DETAILS[key]

@@ -1,0 +1,127 @@
+@mixin flexcenter($direction){
+  display:flex;
+  flex-direction: $direction;
+}
+
+@mixin tabl {
+  @media (max-width:1000px) {
+    @content;
+  }
+}
+
+@mixin mob{
+  @media (max-width:500px)
+  {
+    @content;
+  }
+}
+
+.person{
+  height: 22px;
+  width: 20px;
+  margin-top:20px;
+  margin-left:21px;
+  border-radius: 0;
+  color: white;
+
+  @include mob{
+    height: 20px;
+    width: 20px;
+    margin-top:10px;
+    margin-left:10px;
+    border-radius: 0px;
+  }
+}
+
+.person-box{
+  width: 60px;
+  height: 60px;
+  margin-left: 27.26px;
+  margin-top: 22.98px;
+  border-radius: 3px;
+  color: #FFFFFF;
+
+  @include mob{
+    width: 40px;
+    height: 40px;
+    margin-left: 14px;
+    margin-top: 11.5px;
+    border-radius: 3px;
+
+    color: #FFFFFF;
+  }
+}
+
+.box-title{
+
+  margin-left: 24.26px;
+  margin-top: 22.98px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  color: #0F0F0F;
+
+  @include mob{
+    width: 60px;
+    height: 30px;
+    margin-left: 22px;
+    margin-top: 11px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 17px;
+    color: black;
+  }
+}
+
+.arrow{
+  margin-left: 2.29px;
+  margin-top: 46.67px;
+  color: #737373;
+
+  @include mob{
+    margin-right: 5px;
+    margin-top: 23px;
+    color: #737373;
+  }
+}
+
+.bottom-line{
+
+
+  height: 3px;
+  margin-top: 54.04px;
+
+  @include mob{
+    height: 3px;
+    margin-top: 23px;
+  }
+}
+
+.box-main{
+
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-radius: 3px;
+
+  @include mob{
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+  }
+
+  @include tabl{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

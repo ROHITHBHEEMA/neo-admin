@@ -1,14 +1,13 @@
 import React, {Component} from "react"
-import PageHOC from "../hoc/PageHOC";
-import NavBarComponent from "../components/Navbar/NavBarComponent";
-import Homedata from "../components/Home/Home";
+import NavBarComponent from "../../components/Navbar/NavBarComponent";
+import Homepagedata from "../../components/Homepagecomponents/Homepageitems/Homepagedata";
 const HomePage = () =>{
 
     return (
         <div>
             <NavBarComponent/>
             <div style={{marginTop: '61.81px'}}>
-                <Homedata/>
+                <Homepagedata/>
             </div>
         </div>
     )

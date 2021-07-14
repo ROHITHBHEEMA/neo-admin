@@ -39,7 +39,7 @@ const LoginPage = () =>{
     return (
         <div>
             <Form className={'form'} onSubmit={onSubmitHandler}>
-                <ContainerComponent  heading={"Login"} id={"Coupons"} style={{marginTop:'70.38px'}}>
+                <ContainerComponent  heading={"Login"} id={"Login"} style={{marginTop:'70.38px'}}>
                     <div className={'d-flex justify-content-center'}>
                         <Image src={profilePic} alt="Picture of the author" width={288} height={97}  />
                     </div>
