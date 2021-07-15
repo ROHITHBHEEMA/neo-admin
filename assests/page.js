@@ -13,7 +13,7 @@ export const PAGE_DETAILS = {
         homepagedisplay:true,
         icon:< FaExchangeAlt className={'person'} />,
         navicon:<FaExchangeAlt style={{width:'40px',height:'40px',paddingRight:'15px',color:"#67008f"}} />,
-        link: "/homepage-components/keyfeatures-components"
+        link: "/keyfeatures-components"
     },
     CURRICULUM:{
         title: "CURRICULUM",

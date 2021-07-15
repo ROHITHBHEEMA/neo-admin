@@ -6,6 +6,7 @@ import axios from "axios"
 import NavBarComponent from "../../Navbar/NavBarComponent";
 import CreatableSelect from 'react-select/creatable';
 
+const TagOptions = []
 
 const Class1Component = (props) =>{
     const [editing_State,setEditingState] = useState(false);
@@ -40,13 +41,13 @@ const Class1Component = (props) =>{
             }
 
             setFormState({
-                ...FormState,
+                ...form_State,
                 chapters: new_values,
                 chapter: value
             })
         } else {
             setFormState({
-                    ...FormState,
+                    ...form_State,
                     chapters: [],
                     chapter: []
                 }
@@ -129,7 +130,7 @@ const Class1Component = (props) =>{
                                     options={TagOptions}
                                     className="basic-multi-select"
                                     classNamePrefix="Add tags"
-                                    value={FormState.tag}
+                                    value={form_State.tag}
                                     onChange={(value) => onchaptersChangeHandler('tags',value)}
                                     style={{borderRadius:'0px'}}
                                 />
