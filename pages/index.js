@@ -6,21 +6,21 @@ import {connect} from "react-redux";
 
 
 const HomePage = (props) =>{
-    if(!props.isAuthenticated)
-    {
-        window.location.href = '/login'
-    }
+    // if(!props.isAuthenticated)
+    // {
+    //     window.location.href = '/login'
+    // }
     return (
         <div>
-            {props.isAuthenticated ?
+            {/* {props.isAuthenticated ? */}
                 <>
                     <NavBarComponent/>
                     <div style={{marginTop: '61.81px'}}>
                         <Homedata/>
                     </div>
                 </>
-                :''
-            }
+                {/* :''
+            } */}
         </div>
     )
 }

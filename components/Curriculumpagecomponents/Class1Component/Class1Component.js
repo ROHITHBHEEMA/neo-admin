@@ -6,12 +6,10 @@ import axios from "axios"
 import NavBarComponent from "../../Navbar/NavBarComponent";
 import CreatableSelect from 'react-select/creatable';
 
-const TagOptions = []
-
 const Class1Component = (props) =>{
     const [editing_State,setEditingState] = useState(false);
     const [is_Data,setIsdata] = useState(false);
-    const [form_State,setFormState] = useState({
+    const [FormState,setFormState] = useState({
         id:'',
         subjects:'',
         chapters:[],
@@ -34,6 +32,13 @@ const Class1Component = (props) =>{
 
 
     const onsubjectsChangeHandler = (e) =>{
+        setFormState({
+            ...FormState,
+            subjects:e.target.value
+        })
+    }
+
+    const onchaptersChangeHandler = (field, value) =>{
         if (value !== null) {
             const new_values = []
             for (const option of value) {
@@ -41,25 +46,17 @@ const Class1Component = (props) =>{
             }
 
             setFormState({
-                ...form_State,
+                ...FormState,
                 chapters: new_values,
-                chapter: value
             })
         } else {
             setFormState({
-                    ...form_State,
+                    ...FormState,
                     chapters: [],
-                    chapter: []
                 }
             )
         }
-    }
-
-    const onchaptersChangeHandler = (e) =>{
-        setFormState({
-            ...form_State,
-            chapters:  [...value, createOption(inputValue)],
-        })
+        
     }
 
     console.log(props)
@@ -70,8 +67,8 @@ const Class1Component = (props) =>{
         let form_data={};
 
         form_data = {
-            subjects:form_State.subjects,
-            chapters:form_State.chapters,
+            subjects:FormState.subjects,
+            chapters:FormState.chapters,
         }
 
         if(editing_State===true)
@@ -79,7 +76,7 @@ const Class1Component = (props) =>{
             const update_query = {
                 query: `
                 mutation{
-                    updateclass1byid(id:"${form_State.id}",class1:class1_data){
+                    updateclass1byid(id:"${FormState.id}",class1:class1_data){
                         id
                     }
                 }
@@ -97,14 +94,14 @@ const Class1Component = (props) =>{
         <div>
             <NavBarComponent/>
             <Form className={'form'} onSubmit={onSubmitHandler}>
-                <ContainerComponent heading={"Key Features"} style={{marginTop:'70.38px'}}>
+                <ContainerComponent heading={"Class 1"} style={{marginTop:'70.38px'}}>
                     <Row style={{marginTop:'20px'}}>
 
                         <Col md={6} sm={12} lg={6} xs={12}>
                             <Form.Group as={Col} controlId="subjects">
                                 <Form.Label>Subject</Form.Label>
                                 <Form.Control type="text" placeholder="Subject" onChange={onsubjectsChangeHandler}
-                                              value={form_State.subjects}
+                                              value={FormState.subjects}
                                               required
                                 />
                                 <Form.Control.Feedback type="invalid">
@@ -117,7 +114,7 @@ const Class1Component = (props) =>{
                             <Form.Group as={Col} controlId="chapters">
                                 <Form.Label>Chapters</Form.Label>
                                 {/* <Form.Control as="textarea" rows={3} placeholder="chapters" onChange={onchaptersChangeHandler}
-                                              value={form_State.chapters}
+                                              value={FormState.chapters}
                                               required
                                 />
                                 <Form.Control.Feedback type="invalid">
@@ -126,12 +123,11 @@ const Class1Component = (props) =>{
                                 <CreatableSelect
                                     isClearable
                                     isMulti
-                                    name="tags"
-                                    options={TagOptions}
+                                    name="chapters"
                                     className="basic-multi-select"
-                                    classNamePrefix="Add tags"
-                                    value={form_State.tag}
-                                    onChange={(value) => onchaptersChangeHandler('tags',value)}
+                                    classNamePrefix="Add chapters"
+                                    value={FormState.chapters}
+                                    onChange={(value) => onchaptersChangeHandler('chapters',value)}
                                     style={{borderRadius:'0px'}}
                                 />
 
